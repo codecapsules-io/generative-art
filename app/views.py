@@ -10,6 +10,8 @@ db_directory = os.getenv('PERSISTENT_STORAGE_DIR')
 @app.route("/", methods=["GET"])
 def index():
     graphic_image = create()
+    img = Image.open(io.BytesIO(base64.decodebytes(bytes(graphic_image, "utf-8"))))
+    img.save(os.path.join(db_directory, "imgnew.png"))
     return render_template('home.html', image=graphic_image)
 
 @app.route("/generate-another", methods=["GET"])
