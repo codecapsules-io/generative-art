@@ -5,7 +5,7 @@ import io, base64
 from PIL import Image
 import os
 
-db_directory = os.getenv('PERSISTENT_STORAGE_DIR')
+db_directory = os.getenv('PERSISTENT_STORAGE_DIR', "/tmp")
 
 @app.route("/", methods=["GET"])
 def index():
