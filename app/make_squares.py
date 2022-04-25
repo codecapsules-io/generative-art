@@ -4,12 +4,12 @@ import random
 import json
 import io
 
-pallets = []
-with open("pallets.json") as f:
+palettes = []
+with open("palettes.json") as f:
     ps = json.load(f)
     for p in ps:
-        pallet = [tuple(x) for x in p]
-        pallets.append(pallet)
+        palette = [tuple(x) for x in p]
+        palettes.append(palette)
 
 BLACK = (0, 0, 0, 255)
 
@@ -21,7 +21,7 @@ def create():
     num_recs = random.randrange(20, 40)
     min_size = random.randrange(20,50)
     max_size = min_size + random.randrange(20,100)
-    colors = random.choice(pallets)
+    colors = random.choice(palettes)
     stroke_width = random.randrange(1,5)
     xoffset = 0
     yoffset = 0
