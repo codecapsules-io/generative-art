@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Flask HTMX ALPINE App</title>
+    <title>Generate Art without NFTs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- HTMX -->
@@ -33,7 +33,9 @@
 </head>
 
 <body>
-    <h1>Generate Cool Graphics</h1>
+    <h1>Generate Art</h1>
+
+    <p>The art below is unique. It will never be seen again if you press "I hate this art, make me another". If you like it, you can download it and keep it. No need to get blockchain or NFTs or Open Sea involved: just a few lines of Python. Read our <a href="https://codecapsules.io/docs/tutorials/generative-art-python.html">tutorial on how to make your own</a>.</p>
     {% if image %}
     <div class="image-frame">
         <img id="new-image" src="data:image/png;base64,{{image}}" />
