@@ -21,13 +21,3 @@ def generate_another():
     <img id="new-image" src="data:image/png;base64,{graphic_image}" />
     """
     return response
-
-
-@app.route("/download", methods=["GET", "POST"])
-def download():
-    return send_file(
-        tmp_file_path,
-        mimetype="image/png",
-        as_attachment=True,
-        download_name="graphic.png",
-    )

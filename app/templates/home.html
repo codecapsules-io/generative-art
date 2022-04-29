@@ -44,9 +44,8 @@
 
     <div class="button-row">
     {% if image %}
-    <form action="/download" method="post" enctype="multipart/form-data">
-        <input type="text" name="image" value={{image}} style="display: none;" />
-        <button type="submit" class="btn btn-primary">Download</button>
+        <a download="art.png" href="data:image/png;base64,{{image}}">
+        <button class="btn btn-primary">Download</button></a>
     </form>
     {% endif %}
     <button class="btn btn-primary"
