@@ -30,6 +30,15 @@ def generate_another():
                 <a download="art.png" href="data:image/png;base64,{{image}}">
                 <button class="btn btn-primary">Download</button></a>
             {% endif %}
+
+        <button class="btn btn-primary"
+            hx-target="#image-update-div"
+            hx-get="/generate-another"
+            hx-swap="outerHTML"
+            >
+            I hate this art, make me another
+        </button>
+            </div>
         </div>
     """
     
