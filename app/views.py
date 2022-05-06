@@ -18,6 +18,21 @@ def index():
 def generate_another():
     graphic_image = create(tmp_file_path)
     response = f"""
-    <img id="new-image" src="data:image/png;base64,{graphic_image}" />
+    <div id="image-update-div">
+    {% if image %}
+    <div class="image-frame">
+      <img id="new-image" src="data:image/png;base64,{{image}}" />
+    </div>
+    {% endif %}
+    <div class="button-row">
+      {% if image %}
+      <a download="art.png" href="data:image/png;base64,{{image}}">
+        <button class="btn btn-primary">Download</button></a>
+      {% endif %}
+      <button class="btn btn-primary" hx-target="#image-update-div" hx-get="/generate-another" hx-swap="outerHTML">
+        I hate this art, make me another
+      </button>
+    </div>
+  </div>
     """
     return response
