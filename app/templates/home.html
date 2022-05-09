@@ -34,7 +34,8 @@
         padding: 0 12px;
       }
       button{
-        width: 10em;
+        width: 115px;
+        height: 87px;
         margin: 0 10px;
       }
     }
@@ -68,7 +69,7 @@
     <p>The art below is unique. It will never be seen again if you press "I hate this art, make me another". If you like it, you can download it and keep it. No need to get blockchain or NFTs or Open Sea involved: just a few lines of Python. Read our tutorial <a href="https://codecapsules.io/docs/tutorials/generative-art/">Build a Generative Art Application with Pillow, Flask and HTMx</a> to build your own.</p>
     <div id="image-update-div">
     <div class="image-frame">
-      <img id="new-image" src="data:image/png;base64,{{image}}" />
+      <img id="new-image" alt="Image could not be found." src="data:image/png;base64,{{image}}" />
     </div>
     <div class="button-row">
       <a download="art.png" href="data:image/png;base64,{{image}}">
